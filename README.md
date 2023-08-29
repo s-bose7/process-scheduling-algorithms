@@ -2,10 +2,14 @@
 
 #### Process scheduling algorithms are primarily two types - preemptive and non-preeemptive, here I'm only implementing non-preemptive version of algorithms such as Shortest Job First, Priority Scheduling, Fast Come First Serve.
 
+
+
 ## Things I'm assuming:
   #### 1. The length of the Process Control Block is constant in runtime of these algorithms.
   #### 2. We know the total burst time of CPU, after loading the processes in main memory.
   #### 3. There would not be any I/O wait time associated with the processes.
+
+
 
 ## Non-preemptive implementation
   #### STEP 1: Take input of number of processes, and respective burst time, arrival time, finally make a process control block, which holds all of the information about each process.
