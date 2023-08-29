@@ -1,1 +1,1 @@
-# experiment-twiter-openAI-api
+# I was trying to implement a simple non-preemptive shortest-job-fast scheduling algorithm, but I found people use segments trees or matrices as their primary data structure to implement SJF, while I understand those will be an efficient implementation to handle all probable edge cases, nevertheless I wanted to implement it with simple arrays and structures. 
