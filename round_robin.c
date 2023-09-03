@@ -120,13 +120,13 @@ void update_pcb(struct Process p, struct Process pcb[], int n, bool terminated){
 
 
 void roundRobinMagic(struct Process p, struct Node** QUEUE_BACK){
-
 	// Preemption
 	struct Node* lastNode = createNode(p);
 
 	(*QUEUE_BACK)->next = lastNode;
 	*QUEUE_BACK = lastNode;
 }
+
 
 void remove_executed_node_from_queue(struct Node** READY_QUEUE){
 	
@@ -140,10 +140,8 @@ void remove_executed_node_from_queue(struct Node** READY_QUEUE){
 void execute(struct Node** READY_QUEUE, struct Node** QUEUE_BACK, struct Process pcb[], int n, int* t, int* tq){
 	
 	struct Process p = (*READY_QUEUE)->p;
-
 	if(p.new_burst_times > *tq){
-		// Calculate wait and turnaround time
-		
+		// Calculate wait and turnaround time	
 		p.wt = *t - p.new_arrival_times;;
 		// p.tat = p.wt + *tq; 
 		p.new_burst_times -= *tq;
@@ -154,7 +152,6 @@ void execute(struct Node** READY_QUEUE, struct Node** QUEUE_BACK, struct Process
 		roundRobinMagic(p, QUEUE_BACK);
 
 	}else{
-
 		// Last CPU burst of p
 		p.wt = *t - p.new_arrival_times;
 		// p.tat = p.wt + p.new_burst_times;
@@ -174,8 +171,7 @@ void print_ready_queue(struct Node** READY_QUEUE){
 	printf("\n");
 }
 
-int main()
-{
+int main(){
 	/* code */
 	printf("\n\t\tROUND ROBIN SCHEDULING (Preemptive)\t\n");
 	int p_id[] = {1, 2, 3, 4};
