@@ -32,3 +32,4 @@ Same as up to **Step 5**.
 **Step 7:** After picking a process from the ready queue, compute its wait time and make a decision on whether this process has finished running or needs to be preempted back to the ready queue. If it finishes, compute its turnaround time and update the PCB.
 
 **Step 8:** Finally, estimate the average wait time and average turnaround time for all of the processes in the process control block.
+Example preemptive algorithm - Round Robin scheduling.
