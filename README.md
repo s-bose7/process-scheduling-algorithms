@@ -23,9 +23,9 @@
 
 
   ## Preemptive implementation
-    #### Same upto STEP 5
-    #### STEP 6: We need to preemt processes from the CPU and put it back to the ready queue, in non-preemtive cases we were using arrays as READY_QUEUE, here we will be using linked list,             each node will store a process, and if a process need to preempt then we will simply put the running process back into a node, and insert this node at the tail of READY_QUEUE, on the          other hand if the process finish running, then we will destroy the node after updating nesseary info in PCB. Finally similar to non-preemtive we will update the ready queue in each 
+   #### Same upto STEP 5
+   #### STEP 6: We need to preemt processes from the CPU and put it back to the ready queue, in non-preemtive cases we were using arrays as READY_QUEUE, here we will be using linked list,             each node will store a process, and if a process need to preempt then we will simply put the running process back into a node, and insert this node at the tail of READY_QUEUE, on the          other hand if the process finish running, then we will destroy the node after updating nesseary info in PCB. Finally similar to non-preemtive we will update the ready queue in each 
          iteration for stroing newly arrived processes in the ready queue.
-    #### STEP 7: After picking a process from the ready queue, we need to compute its wait time and we have to make a decision on whether this process has finished running or it needs to 
+   #### STEP 7: After picking a process from the ready queue, we need to compute its wait time and we have to make a decision on whether this process has finished running or it needs to 
          preempted back at the ready queue, if it finished then we will compute its turnaround time and update the pcb. 
-    #### STEP 8: Finally we will estimate the avg wait time and avg turnaround time for all of the processes in the process control block.  
+   #### STEP 8: Finally we will estimate the avg wait time and avg turnaround time for all of the processes in the process control block.  
